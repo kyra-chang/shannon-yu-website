@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('head'); %>
+    <script src="js/jquery/jquery-2.2.4.min.js"></script>
+    <script src="js/jquery/jquery.poptrox.min.js"></script>
+</head>
+
+<body>
+    <%- include('header'); %>
+    
+    
+    <!-- ##### Featured Properties Area Start ##### -->
+    <section class="south-contact-area section-padding-100">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="contact-heading">
+                        <h6>Log In</h6>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12 col-lg-4">
+                    <div class="contact-form">
+                        <% if (message) { %>
+                            <h6><%= message %></h6>
+                        <% } %>
+                        <form action="/photo" method="post" enctype="multipart/form-data">
+                            <div class="form-group">
+                                <input type="file" class="form-control" name="photos" />
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="hashtag" />
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="album" />
+                            </div>
+                            <button type="submit" class="btn south-btn">Upload</button>
+                        </form>
+                        <form action="/dance" method="post" enctype="multipart/form-data">
+                            <div class="form-group">
+                                <input type="file" class="form-control" name="dancePics" />
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="dance" />
+                            </div>
+                            <button type="submit" class="btn south-btn">Upload</button>
+                        </form>
+                        <form action="/index" method="post" enctype="multipart/form-data">
+                            <div class="form-group">
+                                <input type="file" class="form-control" name="indexPics" />
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="index" />
+                            </div>
+                            <button type="submit" class="btn south-btn">Upload</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ##### Featured Properties Area End ##### -->
+    
+    <%- include('footer'); %>
+    <%- include('script'); %>
+</body>
+
+</html>

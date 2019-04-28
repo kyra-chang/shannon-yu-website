@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('head'); %>
+    <script src="js/jquery/jquery-2.2.4.min.js"></script>
+    <script src="js/jquery/jquery.poptrox.min.js"></script>
+</head>
+
+<body>
+    <%- include('header'); %>
+    
+    
+    <!-- ##### Featured Properties Area Start ##### -->
+    <section class="featured-properties-area section-padding-150-50">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="section-heading wow fadeInUp">
+                        <h2>Photography</h2>
+                        <!-- <p>Suspendisse dictum enim sit amet libero malesuada feugiat.</p> -->
+                    </div>
+                </div>
+            </div>
+            <section class="tiles" style="width: 50%;float: left;">
+                <h2 style="width: 100%;margin: 0 40px;">#flowstill</h2>
+                <% flowStill.forEach(function(params){ %>
+                    <%- include('albumBlock', params); %>
+                <% }); %>
+            </section>
+            <section class="tiles" style="width: 50%;">
+                <h2 style="width: 100%;margin: 0 40px;">#aboutBody</h2>
+                <% aboutBody.forEach(function(params){ %>
+                    <%- include('albumBlock', params); %>
+                <% }); %>
+            </section>
+        </div>
+    </section>
+    <!-- ##### Featured Properties Area End ##### -->
+    
+    <%- include('footer'); %>
+    <%- include('script'); %>
+    <script>
+        var cw = $('.image').width();
+        $('.image').css({'height':cw+'px'});
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('head'); %>
+    <script src="js/jquery/jquery-2.2.4.min.js"></script>
+    <script src="js/jquery/jquery.poptrox.min.js"></script>
+</head>
+
+<body>
+    <%- include('header'); %>
+    <section class="featured-properties-area section-padding-150-50">
+        <div class="row">
+            <div class="col-12">
+                <div class="section-heading wow fadeInUp">
+                    <h2>Photography</h2>
+                </div>
+            </div>
+        </div>
+        <div id="carousel" class="container">
+            <% images.photo.forEach(function(src){ %>
+                <%- include('slideOnly', {src: src}); %>
+            <% }); %>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="search-title">
+                    <a href='/albums'><p>see more</p></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="featured-properties-area section-padding-150-50">
+        <div class="row">
+            <div class="col-12">
+                <div class="section-heading wow fadeInUp">
+                    <h2>Dance/Choreography</h2>
+                </div>
+            </div>
+        </div>
+        <div id="carousel" class="container">
+            <% images.dance.forEach(function(src){ %>
+                <%- include('slideOnly', {src: src}); %>
+            <% }); %>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="search-title">
+                    <a href='/dance'><p>see more</p></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="featured-properties-area section-padding-150-50">
+        <div class="row">
+            <div class="col-12">
+                <div class="section-heading wow fadeInUp">
+                    <h2>Integrated Art Practice</h2>
+                </div>
+            </div>
+        </div>
+        <div id="carousel" class="container">
+            <% images.art.forEach(function(src){ %>
+                <%- include('slideOnly', {src: src}); %>
+            <% }); %>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="search-title">
+                    <a href='/dance'><p>see more</p></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ##### Featured Properties Area Start ##### -->
+
+
+    
+    
+    <%- include('footer'); %>
+    <%- include('script'); %>
+</body>
+
+</html>

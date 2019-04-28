@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('head'); %>
+    <script src="js/jquery/jquery-2.2.4.min.js"></script>
+    <script src="js/jquery/jquery.poptrox.min.js"></script>
+</head>
+
+<body>
+    <%- include('header'); %>
+    
+    
+    <section class="featured-properties-area section-padding-150-50">
+        <div class="row">
+            <div class="col-12">
+                <div class="section-heading wow fadeInUp">
+                    <h2>Dance/Choregraphy</h2>
+                </div>
+            </div>
+        </div>
+        <div id="carousel1" class="container">
+            <% dance.dance_c.forEach(function(params){ %>
+                <%- include('slide', params); %>
+            <% }); %>
+        </div>
+    </section>
+    <section class="featured-properties-area section-padding-150-50">
+        <div class="row">
+            <div class="col-12">
+                <div class="section-heading wow fadeInUp">
+                    <h2>Integrated Art Practice</h2>
+                </div>
+            </div>
+        </div>
+        <div id="carousel2" class="container">
+            <% dance.art.forEach(function(params){ %>
+                <%- include('slide', params); %>
+            <% }); %>
+        </div>
+    </section>
+    
+    <%- include('footer'); %>
+    <%- include('script'); %>
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('head'); %>
+    <script src="/js/jquery/jquery-2.2.4.min.js"></script>
+    <script src="/js/jquery/jquery.poptrox.min.js"></script>
+</head>
+
+<body>
+    <%- include('header'); %>
+    
+    <section class="featured-properties-area section-padding-150-50">
+        <div class="container" id="gallery" >
+            <div class="row">
+                <div class="col-12">
+                    <div class="section-heading wow fadeInUp">
+                        <h2>Photography</h2>
+                        <!-- <p>Suspendisse dictum enim sit amet libero malesuada feugiat.</p> -->
+                    </div>
+                </div>
+            </div>
+            <section class="tiles">
+                <h2 style="width: 100%;margin: 0 40px;"><%= '#' + tag + '_______' + name%></h2>
+                <% pic.forEach(function(src){ %>
+                    <%- include('pop', {src: src}); %>
+                <% }); %>
+            </section>
+        </div>
+    </section>
+
+    <%- include('footer'); %>
+    <%- include('script'); %>
+    <script>
+        var cw = $('.image').width();
+        $('.image').css({'height':cw+'px'});
+    </script>
+</body>
+
+</html>
